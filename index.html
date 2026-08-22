@@ -1,42 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Freddy Entrenamiento | El Método</title>
+<meta name="description" content="Freddy Entrenamiento — Entrenamiento, Nutrición y Psicología deportiva. El Método: Temporada 2026/2027.">
+<meta name="theme-color" content="#080808">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23080808'/%3E%3Ccircle cx='23' cy='9' r='5' fill='%23ff2b16'/%3E%3C/svg%3E">
 <style>
-html,body{scroll-behavior:smooth!important}
-#fe-root *{box-sizing:border-box}
-#fe-root a{transition:background-color .15s ease,color .15s ease,box-shadow .15s ease,transform .15s ease,border-color .15s ease}
-#fe-root .fe-arrow{display:inline-block;vertical-align:-2px;transition:transform .15s ease}
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:#000;font-family:Arial,Helvetica,sans-serif}
 
-#fe-root .fe-nav-link{color:#f3f0e8;text-decoration:none}
-#fe-root .fe-btn-solid{color:#fff;text-decoration:none}
-#fe-root .fe-btn-outline-dark{color:#080808;text-decoration:none}
-#fe-root .fe-btn-outline-light{color:#f3f0e8;text-decoration:none}
-#fe-root .fe-social-link{color:#080808;text-decoration:none}
+  #fe-root a{transition:background-color .15s ease,color .15s ease,box-shadow .15s ease,transform .15s ease,border-color .15s ease}
+  #fe-root .fe-arrow{display:inline-block;vertical-align:-2px;transition:transform .15s ease}
 
-@media (hover:hover) and (pointer:fine){
-  #fe-root .fe-nav-link:hover{background:#f3f0e8!important;color:#080808!important;border-color:#f3f0e8!important;transform:translate(-3px,-3px);box-shadow:5px 5px 0 #ff2b16}
-  #fe-root .fe-btn-solid:hover{background:#ff2b16!important;color:#080808!important;box-shadow:4px 4px 0 #080808!important;transform:translate(5px,5px)}
-  #fe-root .fe-btn-outline-dark:hover{background:#080808!important;color:#f3f0e8!important;box-shadow:6px 6px 0 #080808;transform:translate(-3px,-3px)}
-  #fe-root .fe-btn-outline-light:hover{background:#f3f0e8!important;color:#080808!important;box-shadow:6px 6px 0 #f3f0e8;transform:translate(-3px,-3px)}
-  #fe-root .fe-social-link:hover{color:#080808!important;text-decoration:underline!important}
-  #fe-root .fe-nav-link:hover .fe-arrow,#fe-root .fe-btn-solid:hover .fe-arrow,#fe-root .fe-btn-outline-dark:hover .fe-arrow,#fe-root .fe-btn-outline-light:hover .fe-arrow,#fe-root .fe-social-link:hover .fe-arrow{transform:translateX(5px)}
-}
+  #fe-root .fe-nav-link{color:#f3f0e8;text-decoration:none}
+  #fe-root .fe-btn-solid{color:#fff;text-decoration:none}
+  #fe-root .fe-btn-outline-dark{color:#080808;text-decoration:none}
+  #fe-root .fe-btn-outline-light{color:#f3f0e8;text-decoration:none}
+  #fe-root .fe-social-link{color:#080808;text-decoration:none}
 
-#fe-root .fe-h1{font-size:clamp(74px,16vw,190px);letter-spacing:-11px}
+  @media (hover:hover) and (pointer:fine){
+    #fe-root .fe-nav-link:hover{background:#f3f0e8;color:#080808;border-color:#f3f0e8;transform:translate(-3px,-3px);box-shadow:5px 5px 0 #ff2b16}
+    #fe-root .fe-btn-solid:hover{background:#ff2b16;color:#080808;box-shadow:4px 4px 0 #080808;transform:translate(5px,5px)}
+    #fe-root .fe-btn-outline-dark:hover{background:#080808;color:#f3f0e8;box-shadow:6px 6px 0 #080808;transform:translate(-3px,-3px)}
+    #fe-root .fe-btn-outline-light:hover{background:#f3f0e8;color:#080808;box-shadow:6px 6px 0 #f3f0e8;transform:translate(-3px,-3px)}
+    #fe-root .fe-social-link:hover{color:#080808;text-decoration:underline}
+    #fe-root .fe-nav-link:hover .fe-arrow,#fe-root .fe-btn-solid:hover .fe-arrow,#fe-root .fe-btn-outline-dark:hover .fe-arrow,#fe-root .fe-btn-outline-light:hover .fe-arrow,#fe-root .fe-social-link:hover .fe-arrow{transform:translateX(5px)}
+  }
 
-@media (max-width:680px){
-  #fe-root .fe-quote-grid{grid-template-columns:1fr!important}
-  #fe-root .fe-quote-side{display:none!important}
-  #fe-root .fe-proj-item{flex-direction:column!important;align-items:flex-start!important;gap:12px!important;padding:18px 0!important}
-}
-@media (max-width:640px){
-  #fe-root .fe-h1{font-size:clamp(46px,17vw,190px)!important;letter-spacing:-3px!important}
-  #fe-root .fe-h2{font-size:clamp(30px,10vw,115px)!important;letter-spacing:-2px!important}
-  #fe-root .fe-h2-nov{font-size:clamp(28px,9vw,100px)!important;letter-spacing:-2px!important}
-  #fe-root .fe-h2-proj{font-size:clamp(26px,7vw,60px)!important;letter-spacing:-2px!important}
-}
-@media (max-width:400px){
-  #fe-root .fe-h1{font-size:clamp(36px,18vw,190px)!important;letter-spacing:-2px!important}
-  #fe-root .fe-h2{font-size:clamp(24px,10vw,115px)!important}
-}
+  @media (max-width:680px){
+    #fe-root .fe-quote-grid{grid-template-columns:1fr}
+    #fe-root .fe-quote-side{display:none}
+    #fe-root .fe-proj-item{flex-direction:column;align-items:flex-start;gap:12px;padding:18px 0}
+  }
+  @media (max-width:640px){
+    #fe-root .fe-h1{font-size:clamp(46px,17vw,190px);letter-spacing:-3px}
+    #fe-root .fe-h2{font-size:clamp(30px,10vw,115px);letter-spacing:-2px}
+    #fe-root .fe-h2-nov{font-size:clamp(28px,9vw,100px);letter-spacing:-2px}
+    #fe-root .fe-h2-proj{font-size:clamp(26px,7vw,60px);letter-spacing:-2px}
+  }
+  @media (max-width:400px){
+    #fe-root .fe-h1{font-size:clamp(36px,18vw,190px);letter-spacing:-2px}
+    #fe-root .fe-h2{font-size:clamp(24px,10vw,115px)}
+  }
 </style>
+</head>
+<body>
 <div id="fe-root" style="max-width:1200px;margin:20px auto;background:#080808;color:#f3f0e8;font-family:Arial,Helvetica,sans-serif;overflow:hidden;border:1px solid #202020;box-shadow:0 35px 120px rgba(0,0,0,.4)">
   <!-- CABECERA -->
   <div style="height:44px;padding:0 18px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #252525;font-size:8px;font-weight:900;letter-spacing:2.5px;text-transform:uppercase">
@@ -53,7 +64,7 @@ html,body{scroll-behavior:smooth!important}
     <div style="position:absolute;right:4%;top:195px;writing-mode:vertical-rl;font-size:8px;font-weight:900;letter-spacing:2.5px">ESTRUCTURA / SUSTRATO / RAZÓN</div>
     <div style="position:absolute;left:4%;bottom:54px;right:4%">
       <div style="font-size:9px;font-weight:900;letter-spacing:3px;text-transform:uppercase;margin-bottom:25px">Freddy Entrenamiento</div>
-      <h1 class="fe-h1" style="margin:0!important;color:#080808!important;line-height:.68!important;font-weight:900!important;text-transform:uppercase">EL<br>MÉTODO</h1>
+      <h1 class="fe-h1" style="margin:0;color:#080808;font-size:clamp(74px,16vw,190px);line-height:.68;letter-spacing:-11px;font-weight:900;text-transform:uppercase">EL<br>MÉTODO</h1>
       <div style="display:flex;align-items:center;gap:15px;margin-top:42px">
         <div style="height:7px;width:70px;background:#080808"></div>
         <div style="font-size:9px;font-weight:900;letter-spacing:2px">TEMPORADA 2026/2027</div>
@@ -84,7 +95,7 @@ html,body{scroll-behavior:smooth!important}
     <summary style="cursor:pointer;padding:45px 4%;display:flex;justify-content:space-between;align-items:center">
       <div>
         <div style="font-size:8px;color:#ff2b16;font-weight:900;letter-spacing:2px;margin-bottom:13px">Temporada 2026/2027</div>
-        <div class="fe-h2-proj" style="font-size:clamp(32px,6vw,60px);font-weight:900;line-height:.85;letter-spacing:-4px;text-transform:uppercase">PROYECTOS DEPORTIVOS <span style="font-size:20px;vertical-align:middle;margin-left:15px">&#043;</span></div>
+        <div class="fe-h2-proj" style="font-size:clamp(32px,6vw,60px);font-weight:900;line-height:.85;letter-spacing:-4px;text-transform:uppercase">PROYECTOS DEPORTIVOS <span style="font-size:20px;vertical-align:middle;margin-left:15px">+</span></div>
       </div>
     </summary>
     <div style="padding:0 4% 65px">
@@ -281,3 +292,5 @@ html,body{scroll-behavior:smooth!important}
     </div>
   </div>
 </div>
+</body>
+</html>
