@@ -330,4 +330,53 @@
       loadFeed();
     }
   })();
+
+  /* ---------------------------------------------------------------------
+   * 7. Entrenamiento — abre la app de EL MÉTODO (Apps Script) en un overlay
+   *    a pantalla completa en vez de navegar fuera del sitio. El iframe no
+   *    se crea hasta el primer clic (no gasta una carga de Apps Script en
+   *    cada visita), y se limpia al cerrar para no dejar audio/vídeo de
+   *    fondo ni una sesión colgada detrás del overlay.
+   * ------------------------------------------------------------------- */
+  (() => {
+    const opener = document.getElementById('fe-open-training');
+    const overlay = document.getElementById('fe-training');
+    const frame = document.getElementById('fe-training-frame');
+    const closeBtn = document.getElementById('fe-training-close');
+    if (!opener || !overlay || !frame || !closeBtn) return;
+
+    const url = opener.getAttribute('data-training-url');
+    let loaded = false;
+
+    function open() {
+      if (!loaded) {
+        frame.src = url;
+        loaded = true;
+      }
+      overlay.hidden = false;
+      document.body.style.overflow = 'hidden';
+      closeBtn.focus();
+    }
+
+    function close() {
+      overlay.hidden = true;
+      document.body.style.overflow = '';
+      opener.focus();
+    }
+
+    opener.addEventListener('click', (event) => {
+      // Solo interceptamos el click normal (sin Ctrl/Cmd/clic-central, que el
+      // usuario usa a propósito para abrir en pestaña nueva).
+      if (event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) {
+        return;
+      }
+      event.preventDefault();
+      open();
+    });
+
+    closeBtn.addEventListener('click', close);
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape' && !overlay.hidden) close();
+    });
+  })();
 })();
