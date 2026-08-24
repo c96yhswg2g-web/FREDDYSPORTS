@@ -1,283 +1,258 @@
-<style>
-html,body{scroll-behavior:smooth!important}
-#fe-root *{box-sizing:border-box}
-#fe-root a{transition:background-color .15s ease,color .15s ease,box-shadow .15s ease,transform .15s ease,border-color .15s ease}
-#fe-root .fe-arrow{display:inline-block;vertical-align:-2px;transition:transform .15s ease}
-
-#fe-root .fe-nav-link{color:#f3f0e8;text-decoration:none}
-#fe-root .fe-btn-solid{color:#fff;text-decoration:none}
-#fe-root .fe-btn-outline-dark{color:#080808;text-decoration:none}
-#fe-root .fe-btn-outline-light{color:#f3f0e8;text-decoration:none}
-#fe-root .fe-social-link{color:#080808;text-decoration:none}
-
-@media (hover:hover) and (pointer:fine){
-  #fe-root .fe-nav-link:hover{background:#f3f0e8!important;color:#080808!important;border-color:#f3f0e8!important;transform:translate(-3px,-3px);box-shadow:5px 5px 0 #ff2b16}
-  #fe-root .fe-btn-solid:hover{background:#ff2b16!important;color:#080808!important;box-shadow:4px 4px 0 #080808!important;transform:translate(5px,5px)}
-  #fe-root .fe-btn-outline-dark:hover{background:#080808!important;color:#f3f0e8!important;box-shadow:6px 6px 0 #080808;transform:translate(-3px,-3px)}
-  #fe-root .fe-btn-outline-light:hover{background:#f3f0e8!important;color:#080808!important;box-shadow:6px 6px 0 #f3f0e8;transform:translate(-3px,-3px)}
-  #fe-root .fe-social-link:hover{color:#080808!important;text-decoration:underline!important}
-  #fe-root .fe-nav-link:hover .fe-arrow,#fe-root .fe-btn-solid:hover .fe-arrow,#fe-root .fe-btn-outline-dark:hover .fe-arrow,#fe-root .fe-btn-outline-light:hover .fe-arrow,#fe-root .fe-social-link:hover .fe-arrow{transform:translateX(5px)}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Freddy Entrenamiento — El Método</title>
+<meta name="description" content="Entrenamiento, nutrición y psicología deportiva bajo un mismo método: estructura, sustrato y razón. Preparación física de precisión para rendimiento y salud reales.">
+<!-- ⚠️ Sustituye este dominio por el definitivo en Cloudflare antes de publicar -->
+<link rel="canonical" href="https://freddyentrenamiento.com/">
+<meta name="theme-color" content="#080808">
+<meta name="color-scheme" content="dark">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Freddy Entrenamiento">
+<meta property="og:title" content="Freddy Entrenamiento — El Método">
+<meta property="og:description" content="Estructura, sustrato y razón: entrenamiento, nutrición y psicología bajo un mismo método.">
+<meta property="og:locale" content="es_ES">
+<meta property="og:url" content="https://freddyentrenamiento.com/">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23080808'/%3E%3Ccircle cx='23' cy='9' r='5' fill='%23ff2b16'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="styles.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "name": "Freddy Entrenamiento",
+      "url": "https://freddyentrenamiento.com/",
+      "inLanguage": "es"
+    },
+    {
+      "@type": "Person",
+      "name": "Freddy",
+      "jobTitle": "Entrenador y preparador físico",
+      "url": "https://freddyentrenamiento.com/",
+      "knowsAbout": ["Entrenamiento de fuerza", "Preparación física", "Nutrición deportiva", "Psicología del rendimiento"]
+    }
+  ]
 }
+</script>
+</head>
+<body>
 
-#fe-root .fe-h1{font-size:clamp(74px,16vw,190px);letter-spacing:-11px}
+<a class="skip-link" href="#main">Saltar al contenido</a>
+<div class="fe-progress" aria-hidden="true"></div>
+<span class="fe-cursor" aria-hidden="true"></span>
 
-@media (max-width:680px){
-  #fe-root .fe-quote-grid{grid-template-columns:1fr!important}
-  #fe-root .fe-quote-side{display:none!important}
-  #fe-root .fe-proj-item{flex-direction:column!important;align-items:flex-start!important;gap:12px!important;padding:18px 0!important}
-}
-@media (max-width:640px){
-  #fe-root .fe-h1{font-size:clamp(46px,17vw,190px)!important;letter-spacing:-3px!important}
-  #fe-root .fe-h2{font-size:clamp(30px,10vw,115px)!important;letter-spacing:-2px!important}
-  #fe-root .fe-h2-nov{font-size:clamp(28px,9vw,100px)!important;letter-spacing:-2px!important}
-  #fe-root .fe-h2-proj{font-size:clamp(26px,7vw,60px)!important;letter-spacing:-2px!important}
-}
-@media (max-width:400px){
-  #fe-root .fe-h1{font-size:clamp(36px,18vw,190px)!important;letter-spacing:-2px!important}
-  #fe-root .fe-h2{font-size:clamp(24px,10vw,115px)!important}
-}
-</style>
-<div id="fe-root" style="max-width:1200px;margin:20px auto;background:#080808;color:#f3f0e8;font-family:Arial,Helvetica,sans-serif;overflow:hidden;border:1px solid #202020;box-shadow:0 35px 120px rgba(0,0,0,.4)">
-  <!-- CABECERA -->
-  <div style="height:44px;padding:0 18px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #252525;font-size:8px;font-weight:900;letter-spacing:2.5px;text-transform:uppercase">
-    <span>Freddy Entrenamiento // El Método</span>
-    <span style="color:#b9ff00">● ONLINE</span>
-  </div>
-  <!-- HERO -->
-  <div style="position:relative;min-height:690px;background:#f3f0e8;color:#080808;overflow:hidden">
-    <div style="position:absolute;left:4%;top:40px;font-size:8px;font-weight:900;letter-spacing:2.5px;text-transform:uppercase">SISTEMA DE ENTRENAMIENTO HUMANO/ 001</div>
-    <div style="position:absolute;right:4%;top:35px;width:110px;height:110px;border:1px solid #080808;border-radius:50%"></div>
-    <div style="position:absolute;right:4%;top:90px;width:110px;height:1px;background:#080808"></div>
-    <div style="position:absolute;left:-170px;bottom:-210px;width:500px;height:500px;border:1px solid rgba(8,8,8,.14);border-radius:50%"></div>
-    <div style="position:absolute;right:-160px;bottom:-160px;width:470px;height:470px;background:#ff2b16"></div>
-    <div style="position:absolute;right:4%;top:195px;writing-mode:vertical-rl;font-size:8px;font-weight:900;letter-spacing:2.5px">ESTRUCTURA / SUSTRATO / RAZÓN</div>
-    <div style="position:absolute;left:4%;bottom:54px;right:4%">
-      <div style="font-size:9px;font-weight:900;letter-spacing:3px;text-transform:uppercase;margin-bottom:25px">Freddy Entrenamiento</div>
-      <h1 class="fe-h1" style="margin:0!important;color:#080808!important;line-height:.68!important;font-weight:900!important;text-transform:uppercase">EL<br>MÉTODO</h1>
-      <div style="display:flex;align-items:center;gap:15px;margin-top:42px">
-        <div style="height:7px;width:70px;background:#080808"></div>
-        <div style="font-size:9px;font-weight:900;letter-spacing:2px">TEMPORADA 2026/2027</div>
-      </div>
-    </div>
-  </div>
-  <!-- CITA -->
-  <div class="fe-quote-grid" style="display:grid;grid-template-columns:70px 1fr 70px;border-bottom:1px solid #252525;min-height:135px">
-    <div class="fe-quote-side" style="border-right:1px solid #252525;display:flex;align-items:center;justify-content:center;font-size:8px;font-weight:900;letter-spacing:2px;writing-mode:vertical-rl">EL MÉTODO</div>
-    <div style="padding:32px 6%;display:flex;align-items:center;justify-content:center;gap:30px">
-      <div style="text-align:center">
-        <div style="font-size:8px;color:#ff2b16;font-weight:900;letter-spacing:2px;margin-bottom:10px">Nelson Mandela</div>
-        <div style="font-size:clamp(19px,3vw,32px);font-weight:900;line-height:.95;letter-spacing:-1px">&quot;Soy el amo de mi destino, Soy el capitán de mi alma.&quot;</div>
-      </div>
-    </div>
-    <div class="fe-quote-side" style="border-left:1px solid #252525;display:flex;align-items:center;justify-content:center;font-size:8px;font-weight:900;letter-spacing:2px;writing-mode:vertical-rl;color:#666">RENDIMIENTO / SALUD</div>
-  </div>
-  <!-- NAVEGACIÓN -->
-  <div style="padding:22px 4%;background:#0d0d0d;border-bottom:1px solid #252525;display:flex;flex-wrap:wrap;gap:8px">
-    <a href="#projects-toggle" class="fe-nav-link" style="padding:11px 14px;border:1px solid #333;font-size:8px;font-weight:900;letter-spacing:1.5px;text-transform:uppercase">00/ PROYECTOS</a>
-    <a href="#ENTRENA" class="fe-nav-link" style="padding:11px 14px;border:1px solid #333;font-size:8px;font-weight:900;letter-spacing:1.5px;text-transform:uppercase">01 / ENTRENAMIENTO</a>
-    <a href="#NUTRE" class="fe-nav-link" style="padding:11px 14px;border:1px solid #333;font-size:8px;font-weight:900;letter-spacing:1.5px;text-transform:uppercase">02 / NUTRICIÓN</a>
-    <a href="#REFLEXIONA" class="fe-nav-link" style="padding:11px 14px;border:1px solid #333;font-size:8px;font-weight:900;letter-spacing:1.5px;text-transform:uppercase">03 / PSICOLOGÍA</a>
-    <a href="#novedades" class="fe-nav-link" style="padding:11px 14px;border:1px solid #333;font-size:8px;font-weight:900;letter-spacing:1.5px;text-transform:uppercase">04 / NOVEDADES</a>
-  </div>
-  <!-- PROYECTOS -->
-  <details id="projects-toggle" style="background:#080808;border-bottom:1px solid #252525">
-    <summary style="cursor:pointer;padding:45px 4%;display:flex;justify-content:space-between;align-items:center">
-      <div>
-        <div style="font-size:8px;color:#ff2b16;font-weight:900;letter-spacing:2px;margin-bottom:13px">Temporada 2026/2027</div>
-        <div class="fe-h2-proj" style="font-size:clamp(32px,6vw,60px);font-weight:900;line-height:.85;letter-spacing:-4px;text-transform:uppercase">PROYECTOS DEPORTIVOS <span style="font-size:20px;vertical-align:middle;margin-left:15px">&#043;</span></div>
-      </div>
-    </summary>
-    <div style="padding:0 4% 65px">
-      <div style="border-top:1px solid #333">
-        <!-- Item 01 -->
-        <div class="fe-proj-item" style="min-height:100px;border-bottom:1px solid #333;display:flex;align-items:center;gap:20px">
-          <div style="width:30px;color:#ff2b16;font-size:10px;font-weight:900">01</div>
-          <div style="width:65px;height:65px;background:#fff;display:flex;align-items:center;justify-content:center;flex:0 0 65px;border:1px solid #333">
-            <img src="ANd9GcQwWHpgUSF55RWydK9Zt-r4GRc-dE0slE9MCs_ShwUsOA&amp;s=10" alt="" style="max-width:85%;max-height:85%;object-fit:contain">
-          </div>
-          <div style="flex:1">
-            <div style="font-size:8px;color:#777;font-weight:900;letter-spacing:1.5px;margin-bottom:5px">INSTITUTO MUNICIPAL DE DEPORTES DE SANTANDER</div>
-            <div style="font-size:clamp(14px,2.2vw,22px);font-weight:900;line-height:.95;text-transform:uppercase">TÉCNICO DEPORTIVO - ESCUELA MUNICIPAL DE RUGBY</div>
-          </div>
-        </div>
-        <!-- Item 02 -->
-        <div class="fe-proj-item" style="min-height:100px;border-bottom:1px solid #333;display:flex;align-items:center;gap:20px">
-          <div style="width:30px;color:#ff2b16;font-size:10px;font-weight:900">02</div>
-          <div style="width:65px;height:65px;background:#fff;display:flex;align-items:center;justify-content:center;flex:0 0 65px;border:1px solid #333">
-            <img src="ANd9GcRLLbkG-4F3OZoQfrEcSR05yoxM3dX8WphpO1pOlBUG3A&amp;s=10" alt="" style="max-width:85%;max-height:85%;object-fit:contain">
-          </div>
-          <div style="flex:1">
-            <div style="font-size:8px;color:#777;font-weight:900;letter-spacing:1.5px;margin-bottom:5px">FEDERACIÓN CÁNTABRA DE RUGBY</div>
-            <div style="font-size:clamp(14px,2.2vw,22px);font-weight:900;line-height:.95;text-transform:uppercase">PROMOCIÓN AUTONÓMICA - FEDERACIÓN CÁNTABRA DE RUGBY</div>
-          </div>
-        </div>
-        <!-- Item 03 -->
-        <div class="fe-proj-item" style="min-height:100px;border-bottom:1px solid #333;display:flex;align-items:center;gap:20px">
-          <div style="width:30px;color:#ff2b16;font-size:10px;font-weight:900">03</div>
-          <div style="width:65px;height:65px;background:#fff;display:flex;align-items:center;justify-content:center;flex:0 0 65px;border:1px solid #333">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzicFCKLn8tpK0gY2a3TpdCwu07E04-mDriRH1Lwtrgw&amp;s=10" alt="" style="max-width:85%;max-height:85%;object-fit:contain">
-          </div>
-          <div style="flex:1">
-            <div style="font-size:8px;color:#777;font-weight:900;letter-spacing:1.5px;margin-bottom:5px">SUPERLIGA FEMENINA 2</div>
-            <div style="font-size:clamp(14px,2.2vw,22px);font-weight:900;line-height:.95;text-transform:uppercase">PREPARADOR FÍSICO - A.D. VOLEIBOL ASTILLERO</div>
-          </div>
-        </div>
-        <!-- Item 04 -->
-        <div class="fe-proj-item" style="min-height:100px;border-bottom:1px solid #333;display:flex;align-items:center;gap:20px">
-          <div style="width:30px;color:#ff2b16;font-size:10px;font-weight:900">04</div>
-          <div style="width:65px;height:65px;background:#fff;display:flex;align-items:center;justify-content:center;flex:0 0 65px;border:1px solid #333">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYhbfP3e0ulWyfKzouvTgOjejOA4nKY4zQ0CeX3ILIuQI45tUySbNH_Zk&amp;s=10" alt="" style="max-width:85%;max-height:85%;object-fit:contain">
-          </div>
-          <div style="flex:1">
-            <div style="font-size:8px;color:#777;font-weight:900;letter-spacing:1.5px;margin-bottom:5px">1ª DIVISIÓN NACIONAL FEMENINA</div>
-            <div style="font-size:clamp(14px,2.2vw,22px);font-weight:900;line-height:.95;text-transform:uppercase">PREPARADOR FÍSICO - C.B. NÉMESIS SANTANDER</div>
-          </div>
-        </div>
-        <!-- Item 05 -->
-        <div class="fe-proj-item" style="min-height:100px;border-bottom:1px solid #333;display:flex;align-items:center;gap:20px">
-          <div style="width:30px;color:#ff2b16;font-size:10px;font-weight:900">05</div>
-          <div style="width:65px;height:65px;background:#fff;display:flex;align-items:center;justify-content:center;flex:0 0 65px;border:1px solid #333">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvoIrjNRxVVPEwzROJjFrli2hA7YyEem8wMw6Z8fCL7g&amp;s=10" alt="" style="max-width:85%;max-height:85%;object-fit:contain">
-          </div>
-          <div style="flex:1">
-            <div style="font-size:8px;color:#777;font-weight:900;letter-spacing:1.5px;margin-bottom:5px">CAMARGO RUGBY CLUB</div>
-            <div style="font-size:clamp(14px,2.2vw,22px);font-weight:900;line-height:.95;text-transform:uppercase">PROMOCIÓN LOCAL - CAMARGO RUGBY CLUB</div>
-          </div>
-        </div>
-        <!-- Item 06 -->
-        <div class="fe-proj-item" style="min-height:100px;border-bottom:1px solid #333;display:flex;align-items:center;gap:20px">
-          <div style="width:30px;color:#ff2b16;font-size:10px;font-weight:900">06</div>
-          <div style="width:65px;height:65px;background:#fff;display:flex;align-items:center;justify-content:center;flex:0 0 65px;border:1px solid #333">
-            <img src="ANd9GcT6w_BKLYRdRTDAbLLNhlraja5hsVeuPJ2DjABLNCCLag&amp;s=10" alt="" style="max-width:85%;max-height:85%;object-fit:contain">
-          </div>
-          <div style="flex:1">
-            <div style="font-size:8px;color:#777;font-weight:900;letter-spacing:1.5px;margin-bottom:5px">UNIÓN RUGBY BESAYA</div>
-            <div style="font-size:clamp(14px,2.2vw,22px);font-weight:900;line-height:.95;text-transform:uppercase">TÉCNICO DEPORTIVO - UNIÓN RUGBY BESAYA</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </details>
-  <!-- SECCIONES -->
-  <div id="ENTRENA" style="background:#f3f0e8;color:#080808;min-height:610px;position:relative;overflow:hidden;border-bottom:1px solid #080808">
-    <div style="position:absolute;right:-25px;top:35px;font-size:clamp(160px,28vw,330px);font-weight:900;line-height:.7;letter-spacing:-20px;color:rgba(0,0,0,0.06);pointer-events:none">01</div>
-    <div style="padding:75px 7%;position:relative;z-index:2">
-      <div style="font-size:8px;color:#ff2b16;font-weight:900;letter-spacing:2.5px;margin-bottom:25px">MOD_01 // ESTRUCTURA</div>
-      <div class="fe-h2" style="font-size:clamp(45px,9.5vw,115px);font-weight:900;letter-spacing:-7px;line-height:.75;text-transform:uppercase">ENTRENAMIENTO</div>
-      <div style="display:flex;align-items:center;gap:15px;margin:38px 0 25px">
-        <div style="width:100px;height:6px;background:#080808"></div>
-        <div style="font-size:8px;font-weight:900;letter-spacing:1.5px">PRECISIÓN</div>
-      </div>
-      <p style="max-width:640px;margin:0 0 38px;font-size:clamp(17px,2vw,21px);font-weight:900;line-height:1.25">Cada entrenamiento es el cincel que, ejercicio a ejercicio rompe la roca de tus límites y libera tu obra maestra, tu potencial.</p>
-      <a href="https://script.google.com/macros/s/AKfycbytxEYnRRzYNlTvrUSJA0nx1-LM2HjH_iNi2tidBWj4XkpnJAM_pr-ftzyGvc7D-5fB/exec" class="fe-btn-solid" style="display:inline-block;padding:19px 27px;background:#080808;font-size:11px;font-weight:900;letter-spacing:1.8px;text-transform:uppercase;box-shadow:9px 9px 0 #ff2b16">Entrar a tu Entrenamiento<svg class="fe-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="square" aria-hidden="true"><line x1="3" y1="12" x2="21" y2="12"></line><polyline points="13 4 21 12 13 20"></polyline></svg></a>
-    </div>
-  </div>
-  <div id="NUTRE" style="background:#cfcfc9;color:#080808;min-height:570px;position:relative;overflow:hidden;border-bottom:1px solid #080808">
-    <div style="position:absolute;right:-25px;top:35px;font-size:clamp(160px,28vw,330px);font-weight:900;line-height:.7;letter-spacing:-20px;color:rgba(0,0,0,0.06);pointer-events:none">02</div>
-    <div style="padding:75px 7%;position:relative;z-index:2">
-      <div style="font-size:8px;color:#ff2b16;font-weight:900;letter-spacing:2.5px;margin-bottom:25px">MOD_02 // SUSTRATO</div>
-      <div class="fe-h2" style="font-size:clamp(45px,9.5vw,115px);font-weight:900;letter-spacing:-7px;line-height:.75;text-transform:uppercase">NUTRICIÓN</div>
-      <div style="width:75%;height:1px;background:#080808;margin:38px 0 25px"></div>
-      <p style="max-width:610px;margin:0 0 35px;font-size:17px;font-weight:700;line-height:1.5">Cada elección en tu plato es el sustrato que, comida a comida, nutre tu trabajo y hace florecer tu estructura, tu mejor versión.</p>
-      <a href="https://freddyentrenamiento.wordpress.com/energia/" class="fe-btn-outline-dark" style="display:inline-block;padding:16px 24px;border:3px solid #080808;font-size:10px;font-weight:900;letter-spacing:1.8px;text-transform:uppercase">Entrar a Sustrato<svg class="fe-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="square" aria-hidden="true"><line x1="3" y1="12" x2="21" y2="12"></line><polyline points="13 4 21 12 13 20"></polyline></svg></a>
-    </div>
-  </div>
-  <div id="REFLEXIONA" style="background:#101010;color:#f3f0e8;min-height:570px;position:relative;overflow:hidden;border-bottom:1px solid #292929">
-    <div style="position:absolute;right:-25px;top:35px;font-size:clamp(160px,28vw,330px);font-weight:900;line-height:.7;letter-spacing:-20px;color:rgba(255,255,255,0.06);pointer-events:none">03</div>
-    <div style="padding:75px 7%;position:relative;z-index:2">
-      <div style="font-size:8px;color:#ff2b16;font-weight:900;letter-spacing:2.5px;margin-bottom:25px">MOD_03 // RAZÓN</div>
-      <div class="fe-h2" style="font-size:clamp(45px,9.5vw,115px);font-weight:900;letter-spacing:-7px;line-height:.75;text-transform:uppercase">PSICOLOGÍA</div>
-      <div style="width:100%;height:1px;background:#555;margin:38px 0 25px"></div>
-      <p style="max-width:610px;margin:0 0 35px;font-size:17px;font-weight:700;line-height:1.5;color:#ccc">Cada reflexión es la razón que, pensamiento a pensamiento, forja tu mentalidad y enciende un motor inagotable, tu voluntad.</p>
-      <a href="https://freddyentrenamiento.wordpress.com/razon/" class="fe-btn-outline-light" style="display:inline-block;padding:16px 24px;border:3px solid #f3f0e8;font-size:10px;font-weight:900;letter-spacing:1.8px;text-transform:uppercase">Entrar a Razón<svg class="fe-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="square" aria-hidden="true"><line x1="3" y1="12" x2="21" y2="12"></line><polyline points="13 4 21 12 13 20"></polyline></svg></a>
-    </div>
-  </div>
-  <!-- SECCIÓN 04 / NOVEDADES (AGRUPA TODAS LAS PUBLICACIONES) -->
-  <div id="novedades" style="background:#ff2b16;color:#080808">
+<div class="fe-shell">
 
-    <!-- SUB-BLOQUE: INTRO CLAVES -->
-    <div style="min-height:560px;position:relative;overflow:hidden;border-bottom:1px solid rgba(8,8,8,0.25)">
-      <div style="position:absolute;right:-90px;bottom:-130px;width:390px;height:390px;border:1px solid rgba(8,8,8,.25);border-radius:50%;pointer-events:none"></div>
-      <div style="padding:75px 7%;position:relative;z-index:2">
-        <div style="font-size:8px;font-weight:900;letter-spacing:2.5px;margin-bottom:28px">MOD_04 // NOVEDADES</div>
-        <div class="fe-h2-nov" style="font-size:clamp(45px,8.5vw,100px);font-weight:900;line-height:.75;letter-spacing:-7px;text-transform:uppercase">LAS 10 CLAVES</div>
-        <p style="max-width:640px;margin:35px 0 0;font-size:16px;font-weight:800;line-height:1.35">El problema no es tu esfuerzo, es tu enfoque: estás tratando a tu cuerpo como un adorno, no como una máquina.<br><br>Empiezo hoy una serie de 10 claves para enseñarte a entrenar con propósito, evitar lesiones y dominar tu técnica.</p>
-        <div style="display:flex;align-items:center;gap:15px;margin-top:40px">
-          <div style="width:95px;height:6px;background:#080808"></div>
-          <a href="https://www.instagram.com/p/Daw6uPYIW_B/" target="_blank" rel="noopener" class="fe-social-link" style="font-size:10px;font-weight:900;letter-spacing:1.8px;text-transform:uppercase">VER INSTAGRAM<svg class="fe-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="square" aria-hidden="true"><line x1="3" y1="12" x2="21" y2="12"></line><polyline points="13 4 21 12 13 20"></polyline></svg></a>
-        </div>
+  <header class="fe-header">
+    <p>Freddy Entrenamiento <span aria-hidden="true">//</span> El Método</p>
+    <p class="fe-header__status"><span class="fe-status-dot"></span>Online</p>
+  </header>
+
+  <nav class="fe-nav" aria-label="Secciones de la página">
+    <div class="fe-nav__inner">
+      <a class="fe-nav__link" data-nav-group="nav" data-nav-for="projects-toggle" href="#projects-toggle">00 / Proyectos</a>
+      <a class="fe-nav__link" data-nav-group="nav" data-nav-for="ENTRENA" href="#ENTRENA">01 / Entrenamiento</a>
+      <a class="fe-nav__link" data-nav-group="nav" data-nav-for="NUTRE" href="#NUTRE">02 / Nutrición</a>
+      <a class="fe-nav__link" data-nav-group="nav" data-nav-for="REFLEXIONA" href="#REFLEXIONA">03 / Psicología</a>
+      <a class="fe-nav__link" data-nav-group="nav" data-nav-for="novedades" href="#novedades">04 / Novedades</a>
+    </div>
+  </nav>
+
+  <main id="main">
+
+    <!-- HERO -->
+    <section class="fe-hero" aria-label="Presentación">
+      <p class="fe-hero__eyebrow">Sistema de entrenamiento humano / 001</p>
+      <svg class="fe-hero__mark" viewBox="0 0 110 110" aria-hidden="true">
+        <circle cx="55" cy="55" r="54"></circle>
+        <line x1="0" y1="55" x2="110" y2="55"></line>
+      </svg>
+      <p class="fe-hero__side-label" aria-hidden="true">Estructura / Sustrato / Razón</p>
+      <div class="fe-hero__ring" aria-hidden="true"></div>
+      <div class="fe-hero__disc" aria-hidden="true"></div>
+      <p class="fe-hero__kicker">Freddy Entrenamiento</p>
+      <h1>El<br>Método</h1>
+      <div class="fe-hero__meta">
+        <span class="fe-hero__rule" aria-hidden="true"></span>
+        <span class="fe-hero__season">Temporada 2026/2027</span>
       </div>
-    </div>
-    <!-- SUB-BLOQUE: CLAVE #1 -->
-    <div style="min-height:560px;position:relative;overflow:hidden;border-bottom:1px solid rgba(8,8,8,0.25)">
-      <div style="position:absolute;right:-90px;bottom:-130px;width:390px;height:390px;border:1px solid rgba(8,8,8,.25);border-radius:50%;pointer-events:none"></div>
-      <div style="padding:75px 7%;position:relative;z-index:2">
-        <div style="font-size:8px;font-weight:900;letter-spacing:2.5px;margin-bottom:28px">MOD_04 // NOVEDADES</div>
-        <div class="fe-h2-nov" style="font-size:clamp(45px,8.5vw,100px);font-weight:900;line-height:.75;letter-spacing:-7px;text-transform:uppercase">CLAVE #1</div>
-        <p style="max-width:640px;margin:35px 0 0;font-size:15px;font-weight:800;line-height:1.35">Queremos resultados rápidos, ejercicios complejos y rutinas avanzadas, pero nos olvidamos de lo fundamental. El verdadero progreso en el gimnasio no se trata de complicar las cosas, sino de dominar los cimientos.<br><br>La clave no es aislar más el músculo con variantes raras, sino hacer lo simple con una precisión extrema. Cero atajos: solo técnica sólida y constancia real para construir resultados que duren para siempre.</p>
-        <div style="display:flex;align-items:center;gap:15px;margin-top:40px">
-          <div style="width:95px;height:6px;background:#080808"></div>
-          <a href="https://www.instagram.com/p/Da0muzmIH-Y/" target="_blank" rel="noopener" class="fe-social-link" style="font-size:10px;font-weight:900;letter-spacing:1.8px;text-transform:uppercase">VER INSTAGRAM<svg class="fe-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="square" aria-hidden="true"><line x1="3" y1="12" x2="21" y2="12"></line><polyline points="13 4 21 12 13 20"></polyline></svg></a>
+    </section>
+
+    <!-- CITA -->
+    <section class="fe-quote" aria-label="Cita">
+      <div class="fe-quote__grid">
+        <p class="fe-quote__side" aria-hidden="true">El método</p>
+        <div class="fe-quote__body">
+          <div>
+            <p class="fe-quote__author">Nelson Mandela</p>
+            <blockquote>"Soy el amo de mi destino, soy el capitán de mi alma."</blockquote>
+          </div>
         </div>
+        <p class="fe-quote__side" aria-hidden="true">Rendimiento / Salud</p>
       </div>
-    </div>
-    <!-- SUB-BLOQUE: CLAVE #2 -->
-    <div style="min-height:560px;position:relative;overflow:hidden;border-bottom:1px solid rgba(8,8,8,0.25)">
-      <div style="position:absolute;right:-90px;bottom:-130px;width:390px;height:390px;border:1px solid rgba(8,8,8,.25);border-radius:50%;pointer-events:none"></div>
-      <div style="padding:75px 7%;position:relative;z-index:2">
-        <div style="font-size:8px;font-weight:900;letter-spacing:2.5px;margin-bottom:28px">MOD_04 // NOVEDADES</div>
-        <div class="fe-h2-nov" style="font-size:clamp(45px,8.5vw,100px);font-weight:900;line-height:.75;letter-spacing:-7px;text-transform:uppercase">CLAVE #2</div>
-        <p style="max-width:640px;margin:35px 0 0;font-size:15px;font-weight:800;line-height:1.35">Entrenar sin un objetivo claro es el camino más rápido para perder el tiempo. Copiar la rutina de otros no te dará los mismos resultados porque sus metas y prioridades no son las tuyas.<br><br>Define tu objetivo antes de pisar el gimnasio y haz que cada movimiento cuente.</p>
-        <div style="display:flex;align-items:center;gap:15px;margin-top:40px">
-          <div style="width:95px;height:6px;background:#080808"></div>
-          <a href="https://www.instagram.com/reel/DbA_bArMNOn/?igsh=ZHp2Zm1paTFraXZ3" target="_blank" rel="noopener" class="fe-social-link" style="font-size:10px;font-weight:900;letter-spacing:1.8px;text-transform:uppercase">VER REEL<svg class="fe-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="square" aria-hidden="true"><line x1="3" y1="12" x2="21" y2="12"></line><polyline points="13 4 21 12 13 20"></polyline></svg></a>
+    </section>
+
+    <!-- PROYECTOS -->
+    <section class="fe-projects" aria-labelledby="proj-heading">
+      <details id="projects-toggle" data-track="nav">
+        <summary class="fe-projects__summary">
+          <span>
+            <span class="fe-projects__season">Temporada 2026/2027</span>
+            <span id="proj-heading" class="fe-projects__title">Proyectos deportivos
+              <span class="fe-projects__plus" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="square"><line x1="12" y1="3" x2="12" y2="21"></line><line x1="3" y1="12" x2="21" y2="12"></line></svg>
+              </span>
+            </span>
+          </span>
+        </summary>
+
+        <ul class="fe-projects__list">
+          <li class="fe-project" data-reveal>
+            <span class="fe-project__index" aria-hidden="true">01</span>
+            <span class="fe-project__badge" aria-hidden="true">EMR</span>
+            <span class="fe-project__body">
+              <span class="fe-project__org">Instituto Municipal de Deportes de Santander</span>
+              <span class="fe-project__role">Técnico deportivo · Escuela Municipal de Rugby</span>
+            </span>
+          </li>
+          <li class="fe-project" data-reveal>
+            <span class="fe-project__index" aria-hidden="true">02</span>
+            <span class="fe-project__badge" aria-hidden="true">FCR</span>
+            <span class="fe-project__body">
+              <span class="fe-project__org">Federación Cántabra de Rugby</span>
+              <span class="fe-project__role">Promoción autonómica · Federación Cántabra de Rugby</span>
+            </span>
+          </li>
+          <li class="fe-project" data-reveal>
+            <span class="fe-project__index" aria-hidden="true">03</span>
+            <span class="fe-project__badge" aria-hidden="true">AVA</span>
+            <span class="fe-project__body">
+              <span class="fe-project__org">Superliga Femenina 2</span>
+              <span class="fe-project__role">Preparador físico · A.D. Voleibol Astillero</span>
+            </span>
+          </li>
+          <li class="fe-project" data-reveal>
+            <span class="fe-project__index" aria-hidden="true">04</span>
+            <span class="fe-project__badge" aria-hidden="true">CBN</span>
+            <span class="fe-project__body">
+              <span class="fe-project__org">1ª División Nacional Femenina</span>
+              <span class="fe-project__role">Preparador físico · C.B. Némesis Santander</span>
+            </span>
+          </li>
+          <li class="fe-project" data-reveal>
+            <span class="fe-project__index" aria-hidden="true">05</span>
+            <span class="fe-project__badge" aria-hidden="true">CRC</span>
+            <span class="fe-project__body">
+              <span class="fe-project__org">Camargo Rugby Club</span>
+              <span class="fe-project__role">Promoción local · Camargo Rugby Club</span>
+            </span>
+          </li>
+          <li class="fe-project" data-reveal>
+            <span class="fe-project__index" aria-hidden="true">06</span>
+            <span class="fe-project__badge" aria-hidden="true">URB</span>
+            <span class="fe-project__body">
+              <span class="fe-project__org">Unión Rugby Besaya</span>
+              <span class="fe-project__role">Técnico deportivo · Unión Rugby Besaya</span>
+            </span>
+          </li>
+        </ul>
+      </details>
+    </section>
+
+    <!-- ENTRENAMIENTO -->
+    <section id="ENTRENA" class="fe-module fe-module--light" data-track="nav" data-reveal aria-labelledby="entrena-h">
+      <p class="fe-module__watermark" aria-hidden="true">01</p>
+      <div class="fe-module__inner">
+        <p class="fe-module__mod">Mod_01 // Estructura</p>
+        <h2 id="entrena-h">Entrenamiento</h2>
+        <div class="fe-module__rule"><i aria-hidden="true"></i><span class="fe-hero__season">Precisión</span></div>
+        <p>Cada entrenamiento es el cincel que, ejercicio a ejercicio, rompe la roca de tus límites y libera tu obra maestra: tu potencial.</p>
+        <a class="fe-btn fe-btn--solid" data-cursor-active href="https://script.google.com/macros/s/AKfycbytxEYnRRzYNlTvrUSJA0nx1-LM2HjH_iNi2tidBWj4XkpnJAM_pr-ftzyGvc7D-5fB/exec">
+          Entrar a tu Entrenamiento
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="square" aria-hidden="true"><line x1="3" y1="12" x2="21" y2="12"></line><polyline points="13 4 21 12 13 20"></polyline></svg>
+        </a>
+      </div>
+    </section>
+
+    <!-- NUTRICIÓN -->
+    <section id="NUTRE" class="fe-module fe-module--muted" data-track="nav" data-reveal aria-labelledby="nutre-h">
+      <p class="fe-module__watermark" aria-hidden="true">02</p>
+      <div class="fe-module__inner">
+        <p class="fe-module__mod">Mod_02 // Sustrato</p>
+        <h2 id="nutre-h">Nutrición</h2>
+        <div class="fe-module__rule"><i aria-hidden="true"></i></div>
+        <p>Cada elección en tu plato es el sustrato que, comida a comida, nutre tu trabajo y hace florecer tu estructura: tu mejor versión.</p>
+        <a class="fe-btn fe-btn--outline-dark" data-cursor-active href="https://freddyentrenamiento.wordpress.com/energia/">
+          Entrar a Sustrato
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="square" aria-hidden="true"><line x1="3" y1="12" x2="21" y2="12"></line><polyline points="13 4 21 12 13 20"></polyline></svg>
+        </a>
+      </div>
+    </section>
+
+    <!-- PSICOLOGÍA -->
+    <section id="REFLEXIONA" class="fe-module fe-module--dark" data-track="nav" data-reveal aria-labelledby="reflexiona-h">
+      <p class="fe-module__watermark" aria-hidden="true">03</p>
+      <div class="fe-module__inner">
+        <p class="fe-module__mod">Mod_03 // Razón</p>
+        <h2 id="reflexiona-h">Psicología</h2>
+        <div class="fe-module__rule"><i aria-hidden="true"></i></div>
+        <p>Cada reflexión es la razón que, pensamiento a pensamiento, forja tu mentalidad y enciende un motor inagotable: tu voluntad.</p>
+        <a class="fe-btn fe-btn--outline-light" data-cursor-active href="https://freddyentrenamiento.wordpress.com/razon/">
+          Entrar a Razón
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="square" aria-hidden="true"><line x1="3" y1="12" x2="21" y2="12"></line><polyline points="13 4 21 12 13 20"></polyline></svg>
+        </a>
+      </div>
+    </section>
+
+    <!-- NOVEDADES — feed unificado (Instagram, YouTube, Facebook, TikTok) -->
+    <section id="novedades" class="fe-editorial" data-track="nav" aria-labelledby="nov-h">
+      <div class="fe-editorial__head">
+        <p class="fe-key__mod" id="nov-h">Mod_04 // Novedades</p>
+        <h3>Últimas publicaciones</h3>
+      </div>
+
+      <div class="fe-feed" id="fe-feed" data-feed-url="https://freddy-feed.TU-SUBDOMINIO.workers.dev/feed.json">
+        <div class="fe-feed__filters" role="radiogroup" aria-label="Filtrar por red social" id="fe-feed-filters" hidden>
+          <button type="button" class="fe-feed__filter is-active" role="radio" aria-checked="true" data-filter="all">Todo</button>
         </div>
-      </div>
-    </div>
-    <!-- SUB-BLOQUE: CLAVE #3 -->
-    <div style="min-height:560px;position:relative;overflow:hidden;border-bottom:1px solid rgba(8,8,8,0.25)">
-      <div style="position:absolute;right:-90px;bottom:-130px;width:390px;height:390px;border:1px solid rgba(8,8,8,.25);border-radius:50%;pointer-events:none"></div>
-      <div style="padding:75px 7%;position:relative;z-index:2">
-        <div style="font-size:8px;font-weight:900;letter-spacing:2.5px;margin-bottom:28px">MOD_04 // NOVEDADES</div>
-        <div class="fe-h2-nov" style="font-size:clamp(45px,8.5vw,100px);font-weight:900;line-height:.75;letter-spacing:-7px;text-transform:uppercase">CLAVE #3</div>
-        <p style="max-width:640px;margin:35px 0 0;font-size:15px;font-weight:800;line-height:1.35">Tu cuerpo busca ahorrar energía y se adapta rápido si le pones un reto cómodo.<br><br>Si quieres ganar fuerza, resistencia o cambiar tu físico, tienes que arrinconar el sistema y exigirte un esfuerzo real. Si sales fresco del gym, no habrá evolución.</p>
-        <div style="display:flex;align-items:center;gap:15px;margin-top:40px">
-          <div style="width:95px;height:6px;background:#080808"></div>
-          <a href="https://youtube.com/shorts/qk3CDChvI1w?is=f3jim_y3n0PVVQA3" target="_blank" rel="noopener" class="fe-social-link" style="font-size:10px;font-weight:900;letter-spacing:1.8px;text-transform:uppercase">VER YOUTUBE<svg class="fe-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="square" aria-hidden="true"><line x1="3" y1="12" x2="21" y2="12"></line><polyline points="13 4 21 12 13 20"></polyline></svg></a>
+
+        <div class="fe-feed__grid" id="fe-feed-grid" aria-live="polite">
+          <p class="fe-feed__status" id="fe-feed-status">Cargando publicaciones…</p>
         </div>
+
+        <noscript>
+          <p class="fe-feed__status">Activa JavaScript para ver el feed, o síguenos directamente:
+            <a href="https://www.instagram.com/freddyentrenamiento/" target="_blank" rel="noopener">Instagram</a>,
+            <a href="https://www.youtube.com/@Freddyentrenamiento" target="_blank" rel="noopener">YouTube</a>,
+            <a href="https://www.facebook.com/" target="_blank" rel="noopener">Facebook</a> y
+            <a href="https://www.tiktok.com/" target="_blank" rel="noopener">TikTok</a>.
+          </p>
+        </noscript>
       </div>
-    </div>
-    <!-- SUB-BLOQUE: CLAVE #4 -->
-    <div style="min-height:560px;position:relative;overflow:hidden;border-bottom:1px solid rgba(8,8,8,0.25)">
-      <div style="position:absolute;right:-90px;bottom:-130px;width:390px;height:390px;border:1px solid rgba(8,8,8,.25);border-radius:50%;pointer-events:none"></div>
-      <div style="padding:75px 7%;position:relative;z-index:2">
-        <div style="font-size:8px;font-weight:900;letter-spacing:2.5px;margin-bottom:28px">MOD_04 // NOVEDADES</div>
-        <div class="fe-h2-nov" style="font-size:clamp(45px,8.5vw,100px);font-weight:900;line-height:.75;letter-spacing:-7px;text-transform:uppercase">CLAVE #4</div>
-        <p style="max-width:640px;margin:35px 0 0;font-size:15px;font-weight:800;line-height:1.35">Tratar la comida como un castigo o una moda pasajera es uno de los mayores errores en el fitness. La alimentación es la materia prima que permite a tu cuerpo reparar tejidos y ganar músculo después de entrenar.<br><br>Si le das a tu cuerpo ingredientes de mala calidad, no podrá reconstruirse por mucho que entrenes duro.<br><br>Alimenta tu proceso y no tus antojos.</p>
-        <div style="display:flex;align-items:center;gap:15px;margin-top:40px">
-          <div style="width:95px;height:6px;background:#080808"></div>
-          <a href="https://vm.tiktok.com/ZN8L1PS88/" target="_blank" rel="noopener" class="fe-social-link" style="font-size:10px;font-weight:900;letter-spacing:1.8px;text-transform:uppercase">VER TIKTOK<svg class="fe-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="square" aria-hidden="true"><line x1="3" y1="12" x2="21" y2="12"></line><polyline points="13 4 21 12 13 20"></polyline></svg></a>
-        </div>
-      </div>
-    </div>
-    <!-- SUB-BLOQUE: CLAVE #5 -->
-    <div style="min-height:560px;position:relative;overflow:hidden">
-      <div style="position:absolute;right:-90px;bottom:-130px;width:390px;height:390px;border:1px solid rgba(8,8,8,.25);border-radius:50%;pointer-events:none"></div>
-      <div style="padding:75px 7%;position:relative;z-index:2">
-        <div style="font-size:8px;font-weight:900;letter-spacing:2.5px;margin-bottom:28px">MOD_04 // NOVEDADES</div>
-        <div class="fe-h2-nov" style="font-size:clamp(45px,8.5vw,100px);font-weight:900;line-height:.75;letter-spacing:-7px;text-transform:uppercase">CLAVE #5</div>
-        <p style="max-width:640px;margin:35px 0 0;font-size:15px;font-weight:800;line-height:1.35">El cuerpo se adapta a todo con una facilidad increíble. Si mantienes el mismo peso, las mismas repeticiones y la misma intensidad, tu organismo asumirá que no necesita seguir mejorando.<br><br>Para seguir progresando aplica la regla innegociable: Si no hay reto mayor, no hay evolución. Oblígate a dar un pequeño paso más cada semana.</p>
-        <div style="display:flex;align-items:center;gap:15px;margin-top:40px">
-          <div style="width:95px;height:6px;background:#080808"></div>
-          <a href="https://vm.tiktok.com/ZN8L1jsth/" target="_blank" rel="noopener" class="fe-social-link" style="font-size:10px;font-weight:900;letter-spacing:1.8px;text-transform:uppercase">VER TIKTOK<svg class="fe-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="square" aria-hidden="true"><line x1="3" y1="12" x2="21" y2="12"></line><polyline points="13 4 21 12 13 20"></polyline></svg></a>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- FOOTER -->
-  <div style="padding:38px 4%;background:#080808;display:flex;justify-content:space-between;align-items:center;gap:20px">
-    <div>
-      <div style="font-size:8px;color:#ff2b16;font-weight:900;letter-spacing:2px;margin-bottom:8px">Un Sueño <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="square" style="vertical-align:-1px;margin:0 4px" aria-hidden="true"><line x1="3" y1="12" x2="21" y2="12"></line><polyline points="13 4 21 12 13 20"></polyline></svg> Una Idea <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="square" style="vertical-align:-1px;margin:0 4px" aria-hidden="true"><line x1="3" y1="12" x2="21" y2="12"></line><polyline points="13 4 21 12 13 20"></polyline></svg> Un Proyecto <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="square" style="vertical-align:-1px;margin:0 4px" aria-hidden="true"><line x1="3" y1="12" x2="21" y2="12"></line><polyline points="13 4 21 12 13 20"></polyline></svg> Una Realidad <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="square" style="vertical-align:-1px;margin:0 4px" aria-hidden="true"><line x1="3" y1="12" x2="21" y2="12"></line><polyline points="13 4 21 12 13 20"></polyline></svg> Ahora</div>
-    </div>
-  </div>
+    </section>
+
+  </main>
+
+  <footer class="fe-footer">
+    <p>
+      Un Sueño
+      <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="square" aria-hidden="true"><line x1="3" y1="12" x2="21" y2="12"></line><polyline points="13 4 21 12 13 20"></polyline></svg>
+      Una Idea
+      <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="square" aria-hidden="true"><line x1="3" y1="12" x2="21" y2="12"></line><polyline points="13 4 21 12 13 20"></polyline></svg>
+      Un Proyecto
+      <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="square" aria-hidden="true"><line x1="3" y1="12" x2="21" y2="12"></line><polyline points="13 4 21 12 13 20"></polyline></svg>
+      Una Realidad
+      <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="square" aria-hidden="true"><line x1="3" y1="12" x2="21" y2="12"></line><polyline points="13 4 21 12 13 20"></polyline></svg>
+      Ahora
+    </p>
+  </footer>
+
 </div>
+
+<script type="module" src="main.js"></script>
+</body>
+</html>
