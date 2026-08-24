@@ -171,7 +171,7 @@
         <h2 id="entrena-h">Entrenamiento</h2>
         <div class="fe-module__rule"><i aria-hidden="true"></i><span class="fe-hero__season">Precisión</span></div>
         <p>Cada entrenamiento es el cincel que, ejercicio a ejercicio, rompe la roca de tus límites y libera tu obra maestra: tu potencial.</p>
-        <a class="fe-btn fe-btn--solid" data-cursor-active href="https://script.google.com/macros/s/AKfycbytxEYnRRzYNlTvrUSJA0nx1-LM2HjH_iNi2tidBWj4XkpnJAM_pr-ftzyGvc7D-5fB/exec">
+        <a class="fe-btn fe-btn--solid" data-cursor-active id="fe-open-training" data-training-url="https://script.google.com/macros/s/AKfycbytxEYnRRzYNlTvrUSJA0nx1-LM2HjH_iNi2tidBWj4XkpnJAM_pr-ftzyGvc7D-5fB/exec" href="https://script.google.com/macros/s/AKfycbytxEYnRRzYNlTvrUSJA0nx1-LM2HjH_iNi2tidBWj4XkpnJAM_pr-ftzyGvc7D-5fB/exec" target="_blank" rel="noopener">
           Entrar a tu Entrenamiento
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="square" aria-hidden="true"><line x1="3" y1="12" x2="21" y2="12"></line><polyline points="13 4 21 12 13 20"></polyline></svg>
         </a>
@@ -252,6 +252,17 @@
   </footer>
 
 </div>
+
+  <!-- ENTRENAMIENTO — overlay a pantalla completa (misma URL de siempre, pero sin salir de la web) -->
+  <div class="fe-training" id="fe-training" hidden>
+    <div class="fe-training__bar">
+      <span class="fe-training__label">Entrenamiento</span>
+      <button type="button" class="fe-training__close" id="fe-training-close" aria-label="Cerrar entrenamiento" data-cursor-active>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="square" aria-hidden="true"><line x1="4" y1="4" x2="20" y2="20"></line><line x1="20" y1="4" x2="4" y2="20"></line></svg>
+      </button>
+    </div>
+    <iframe class="fe-training__frame" id="fe-training-frame" title="Entrenamiento" loading="lazy"></iframe>
+  </div>
 
 <script type="module" src="main.js"></script>
 </body>
