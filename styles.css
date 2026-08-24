@@ -325,48 +325,75 @@ details[open] .fe-projects__plus{ transform:rotate(45deg); }
   .fe-btn:hover svg{ transform:translateX(5px); }
 }
 
-/* ============================== 9. NOVEDADES — experiencia editorial ============================== */
+/* ============================== 9. NOVEDADES — feed unificado (IG/YouTube/Facebook/TikTok) ============================== */
 .fe-editorial{ background:var(--color-accent); color:var(--color-carbon); container-type:inline-size; }
-.fe-editorial__layout{ display:grid; grid-template-columns:min(220px,20%) 1fr; }
-.fe-editorial__index{
-  position:sticky; top:60px; align-self:start;
-  padding:var(--space-xl) 0 var(--space-xl) var(--gutter);
-  height:fit-content;
-}
-.fe-editorial__index ol{ display:flex; flex-direction:column; gap:var(--space-2xs); }
-.fe-editorial__index a{
-  font-size:var(--fs-micro); font-weight:900; letter-spacing:.1em;
-  display:flex; align-items:center; gap:.6em; opacity:.55;
-  transition:opacity var(--dur-fast) var(--ease-out);
-}
-.fe-editorial__index a::before{ content:""; width:1.4em; height:1px; background:currentColor; transition:width var(--dur-fast) var(--ease-out); }
-.fe-editorial__index a.is-active{ opacity:1; }
-.fe-editorial__index a.is-active::before{ width:2.6em; background:var(--color-carbon); }
-@container (max-width:680px){
-  .fe-editorial__layout{ grid-template-columns:1fr; }
-  .fe-editorial__index{ position:static; padding:var(--space-m) var(--gutter) 0; }
-  .fe-editorial__index ol{ flex-direction:row; flex-wrap:wrap; }
+.fe-editorial__head{ padding:var(--space-2xl) var(--gutter) var(--space-m); }
+.fe-key__mod{ font-size:var(--fs-micro); font-weight:900; letter-spacing:.18em; margin-bottom:var(--space-s); }
+.fe-editorial__head h3{
+  font-size:var(--fs-h2-nov); font-weight:900; line-height:.78; letter-spacing:var(--ls-h2); text-transform:uppercase;
 }
 
-.fe-key{
-  position:relative; overflow:hidden; min-height:clamp(380px,58vw,560px);
-  border-bottom:1px solid rgba(8,8,8,.25);
-  content-visibility:auto; contain-intrinsic-size:560px;
+.fe-feed{ padding:0 var(--gutter) var(--space-2xl); }
+
+/* filtros — grupo de radio-botones (una sola red activa a la vez) */
+.fe-feed__filters{ display:flex; flex-wrap:wrap; gap:var(--space-2xs); margin-bottom:var(--space-l); }
+.fe-feed__filters[hidden]{ display:none; }
+.fe-feed__filter{
+  padding:.75em 1.1em; border:1.5px solid var(--color-carbon);
+  font-size:var(--fs-micro); font-weight:900; letter-spacing:.12em; text-transform:uppercase;
+  background:transparent; color:var(--color-carbon);
+  transition:background-color var(--dur-fast) var(--ease-out), color var(--dur-fast) var(--ease-out);
 }
-.fe-key__ring{ position:absolute; right:-90px; bottom:-130px; width:390px; height:390px; border:1px solid rgba(8,8,8,.25); border-radius:50%; pointer-events:none; }
-.fe-key__inner{ padding:var(--space-2xl) var(--gutter); position:relative; z-index:2; }
-.fe-key__mod{ font-size:var(--fs-micro); font-weight:900; letter-spacing:.18em; margin-bottom:var(--space-s); }
-.fe-key h3{ font-size:var(--fs-h2-nov); font-weight:900; line-height:.78; letter-spacing:var(--ls-h2); text-transform:uppercase; }
-.fe-key p{ max-width:42ch; margin-top:var(--space-m); font-size:clamp(.9375rem,.85rem + .3vw,1rem); font-weight:800; line-height:1.4; }
-.fe-key__link{
-  display:inline-flex; align-items:center; gap:.6em; margin-top:var(--space-l);
-  font-size:var(--fs-nano); font-weight:900; letter-spacing:.14em; text-transform:uppercase;
-}
-.fe-key__link svg{ transition:transform var(--dur-fast) var(--ease-out); }
-.fe-key__link-rule{ height:6px; width:95px; background:currentColor; display:block; }
+.fe-feed__filter.is-active{ background:var(--color-carbon); color:var(--color-paper); }
 @media (hover:hover) and (pointer:fine){
-  .fe-key__link:hover{ text-decoration:underline; }
-  .fe-key__link:hover svg{ transform:translateX(5px); }
+  .fe-feed__filter:not(.is-active):hover{ background:rgba(8,8,8,.12); }
+}
+
+.fe-feed__status{ font-size:var(--fs-lead); font-weight:800; grid-column:1/-1; }
+.fe-feed__status a{ text-decoration:underline; }
+
+/* rejilla fluida — sin media queries: se reacomoda sola al ancho disponible */
+.fe-feed__grid{
+  display:grid; grid-template-columns:repeat(auto-fill,minmax(min(100%,270px),1fr));
+  gap:var(--space-s);
+}
+
+.fe-feed-card{
+  background:var(--color-paper); color:var(--color-carbon);
+  display:flex; flex-direction:column; overflow:hidden;
+  border:1px solid rgba(8,8,8,.15);
+  opacity:0; transform:translateY(16px);
+  transition:opacity var(--dur-med) var(--ease-out) calc(var(--reveal-i,0) * 45ms),
+             transform var(--dur-med) var(--ease-out) calc(var(--reveal-i,0) * 45ms),
+             box-shadow var(--dur-fast) var(--ease-out), translate var(--dur-fast) var(--ease-out);
+}
+.fe-feed-card.is-visible{ opacity:1; transform:none; }
+.fe-feed-card[hidden]{ display:none; }
+.fe-feed-card__link{ display:flex; flex-direction:column; flex:1; color:inherit; }
+.fe-feed-card__media{
+  position:relative; aspect-ratio:4/3; background:#dedad0 center/cover no-repeat; flex:none;
+}
+.fe-feed-card__media--empty{ display:none; }
+.fe-feed-card__play{
+  position:absolute; inset:0; display:grid; place-items:center; color:#fff;
+  background:linear-gradient(0deg, rgba(0,0,0,.35), transparent 45%);
+}
+.fe-feed-card__body{ padding:var(--space-s); display:flex; flex-direction:column; gap:.6em; flex:1; }
+.fe-feed-card__meta{ display:flex; align-items:center; gap:.6em; font-size:var(--fs-micro); font-weight:900; letter-spacing:.1em; }
+.fe-feed-card__platform{ color:var(--color-accent); }
+.fe-feed-card__date{ color:var(--color-muted); }
+.fe-feed-card__text{ font-size:.9375rem; font-weight:700; line-height:1.4; flex:1; }
+.fe-feed-card__cta{
+  display:inline-flex; align-items:center; gap:.5em; margin-top:.3em;
+  font-size:var(--fs-micro); font-weight:900; letter-spacing:.12em; text-transform:uppercase;
+}
+.fe-feed-card__cta svg{ transition:transform var(--dur-fast) var(--ease-out); }
+@media (hover:hover) and (pointer:fine){
+  .fe-feed-card:hover{ box-shadow:6px 6px 0 var(--color-carbon); translate:-4px -4px; }
+  .fe-feed-card:hover .fe-feed-card__cta svg{ transform:translateX(4px); }
+}
+@media (prefers-reduced-motion:reduce){
+  .fe-feed-card{ opacity:1; transform:none; }
 }
 
 /* ============================== 10. FOOTER ============================== */
@@ -388,18 +415,28 @@ details[open] .fe-projects__plus{ transform:rotate(45deg); }
   [data-reveal]{ opacity:1; transform:none; transition:none; }
 }
 
-/* ============================== 12. CURSOR PERSONALIZADO (solo desktop, sin motion reducido) ============================== */
+/* ============================== 12. CURSOR PERSONALIZADO (solo desktop, sin motion reducido) ==============================
+   Retícula bicolor (anillo blanco + punto negro) en vez de mix-blend-mode: sobre el rojo de
+   marca (#ff2b16) el contraste de un único color mezclado por "difference" cae a ~2:1 (insuficiente).
+   Con dos colores fijos siempre presentes, el peor caso medido (WCAG, sección roja) es 3.74:1 —
+   por encima del mínimo de 3:1 para componentes de UI — y en el resto de secciones supera 13:1. */
 .fe-cursor{ display:none; }
 html.has-fe-cursor{ cursor:none; }
 html.has-fe-cursor .fe-cursor{
   display:block; position:fixed; z-index:998; left:0; top:0; pointer-events:none;
-  width:28px; height:28px; margin:-14px 0 0 -14px; border-radius:50%;
-  border:1px solid var(--color-accent);
-  transform:translate3d(var(--x,50vw), var(--y,50vh), 0) scale(1);
-  transition:transform .12s var(--ease-out), background-color var(--dur-fast), scale var(--dur-fast);
+  width:14px; height:14px; margin:-7px 0 0 -7px; border-radius:50%;
+  border:1.5px solid #fff;
+  box-shadow:0 0 0 1px rgba(0,0,0,.55);
+  transform:translate3d(var(--x,50vw), var(--y,50vh), 0) scale(var(--fe-cursor-scale,1));
+  transition:transform .12s var(--ease-out);
   will-change:transform;
 }
-html.has-fe-cursor .fe-cursor.is-active{ background:var(--color-accent); scale:1.6; }
+html.has-fe-cursor .fe-cursor::after{
+  content:""; position:absolute; inset:0; margin:auto;
+  width:4px; height:4px; border-radius:50%; background:#000;
+  box-shadow:0 0 0 1px rgba(255,255,255,.55);
+}
+html.has-fe-cursor .fe-cursor.is-active{ --fe-cursor-scale:1.7; }
 html.has-fe-cursor a, html.has-fe-cursor button, html.has-fe-cursor summary{ cursor:none; }
 
 /* ============================== 13. VIEW TRANSITIONS (solo mejora la apertura de Proyectos) ============================== */
