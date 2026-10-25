@@ -37,6 +37,8 @@ a{color:#ffffff}a:hover{color:#b9ff00}
 @keyframes up{from{opacity:0;transform:translateY(40px)}to{opacity:1;transform:none}}
 .track{display:flex;width:max-content;animation:marq 28s linear infinite}
 @keyframes marq{to{transform:translateX(-50%)}}
+.appsl{opacity:0;animation:appfade 18s infinite both}@keyframes appfade{0%{opacity:0}3%{opacity:1}16.6%{opacity:1}19.6%{opacity:0}100%{opacity:0}}@media (prefers-reduced-motion: reduce){.appsl{animation:none}.appsl:first-of-type{opacity:1}}
+
 @supports (animation-timeline: view()){
 .rv{animation:rv linear both;animation-timeline:view();animation-range:entry 5% cover 35%}
 @keyframes rv{from{opacity:.12;transform:translateY(28px)}to{opacity:1;transform:none}}
@@ -134,7 +136,12 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid #b9
 
 <div style="flex: none; position: relative; width: 300px; height: 620px; border-radius: 48px; background: #16191c; border: 1px solid #3a4046; padding: 12px; box-sizing: border-box">
 <div style="position: relative; width: 100%; height: 100%; border-radius: 38px; background: #1f2327; overflow: hidden">
-<iframe src="https://script.google.com/macros/s/AKfycbwi4pCS8cFRrwLaAi_SiLF9WZFaj_q6je7Ho7M4Pl6yN7PekbBvx0cI9iVjSFkxoOW5/exec" title="Plataforma El Método (en vivo)" loading="lazy" style="position: absolute; top: 46px; left: 0; width: 390px; height: 777px; border: 0; transform: scale(0.7077); transform-origin: 0 0; background: #1f2327"></iframe>
+<img class="appsl" src="assets/img/app-1-acceso.jpg" alt="Pantalla de acceso" loading="lazy" style="position: absolute; top: 40px; left: 50%; transform: translateX(-50%); height: calc(100% - 40px); width: auto; animation-delay: 0s">
+<img class="appsl" src="assets/img/app-2-rutina.jpg" alt="Rutina del día" loading="lazy" style="position: absolute; top: 40px; left: 50%; transform: translateX(-50%); height: calc(100% - 40px); width: auto; animation-delay: 3s">
+<img class="appsl" src="assets/img/app-3-ejercicio.jpg" alt="Ejercicio con series y peso sugerido" loading="lazy" style="position: absolute; top: 40px; left: 50%; transform: translateX(-50%); height: calc(100% - 40px); width: auto; animation-delay: 6s">
+<img class="appsl" src="assets/img/app-4-focus.jpg" alt="Modo focus" loading="lazy" style="position: absolute; top: 40px; left: 50%; transform: translateX(-50%); height: calc(100% - 40px); width: auto; animation-delay: 9s">
+<img class="appsl" src="assets/img/app-5-progreso.jpg" alt="Progreso y récords" loading="lazy" style="position: absolute; top: 40px; left: 50%; transform: translateX(-50%); height: calc(100% - 40px); width: auto; animation-delay: 12s">
+<img class="appsl" src="assets/img/app-6-mensajes.jpg" alt="Mensajes con tu coach" loading="lazy" style="position: absolute; top: 40px; left: 50%; transform: translateX(-50%); height: calc(100% - 40px); width: auto; animation-delay: 15s">
 <div style="position: absolute; top: 12px; left: 50%; transform: translateX(-50%); width: 92px; height: 26px; border-radius: 999px; background: #000000; z-index: 2; pointer-events: none" aria-hidden="true"></div>
 </div>
 </div>
