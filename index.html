@@ -37,7 +37,8 @@ a{color:#ffffff}a:hover{color:#b9ff00}
 @keyframes up{from{opacity:0;transform:translateY(40px)}to{opacity:1;transform:none}}
 .track{display:flex;width:max-content;animation:marq 28s linear infinite}
 @keyframes marq{to{transform:translateX(-50%)}}
-.appsl{opacity:0;animation:appfade 18s infinite both}@keyframes appfade{0%{opacity:0}3%{opacity:1}16.6%{opacity:1}19.6%{opacity:0}100%{opacity:0}}@media (prefers-reduced-motion: reduce){.appsl{animation:none}.appsl:first-of-type{opacity:1}}
+.appsl{opacity:0;animation:appfade 18s infinite both}@media (min-width:1000px){.escgrid{grid-template-columns:repeat(9,minmax(0,1fr))!important}}
+@keyframes appfade{0%{opacity:0}3%{opacity:1}16.6%{opacity:1}19.6%{opacity:0}100%{opacity:0}}@media (prefers-reduced-motion: reduce){.appsl{animation:none}.appsl:first-of-type{opacity:1}}
 
 @supports (animation-timeline: view()){
 .rv{animation:rv linear both;animation-timeline:view();animation-range:entry 5% cover 35%}
@@ -153,46 +154,29 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid #b9
 </div>
 </div>
 <div style="margin-top: 26px; display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 10px 20px"><span class="m" style="font-weight: 700; font-size: 15px">TODO ESTO INCLUYE EL PLAN 1:1</span><a href="#planes" style="text-decoration: none; font-size: 15px; border-bottom: 1px solid #ffffff; padding: 6px 0">Ver planes →</a></div>
-<div style="margin-top: 14px; font-size: 12px; color: #6c737a">Pantalla ilustrativa</div>
+<div style="margin-top: 14px; font-size: 12px; color: #6c737a">Capturas de la plataforma · datos de ejemplo</div>
 </div>
 </section>
 
-<!-- ================= TRES PILARES (editorial) ================= -->
-<section style="background: #0e1012">
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 360px), 1fr))">
-<article style="position: relative; min-height: 640px; overflow: hidden; border-right: 1px solid #1d2125; background: #000000">
-<img src="assets/img/voleibol-remate.jpg" alt="Remate en un entrenamiento de voleibol" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 55% 40%; opacity: 0.55">
-<div class="ht" aria-hidden="true"></div>
-<div style="position: relative; height: 100%; min-height: 640px; box-sizing: border-box; padding: 32px 28px; display: flex; flex-direction: column; justify-content: space-between">
-<div style="display: flex; justify-content: space-between"><span class="m" style="font-weight: 900; font-size: 96px; line-height: 0.8">01</span><span class="m" style="font-weight: 700; font-size: 15px; color: #b9ff00">RENDIR MÁS</span></div>
-<div>
-<div class="s" style="font-weight: 900; font-size: clamp(44px, 4.4vw, 68px); line-height: 0.88; text-transform: uppercase">Rendimiento</div>
-<p style="margin: 14px 0 0; max-width: 340px; font-size: 17px; line-height: 1.5; color: #d3d8dc">Más fuerte, más rápido y más preparado para tu deporte.</p>
+<!-- ================= ESCUDOS: CON QUIÉN TRABAJO ================= -->
+<section style="background: #0e1012; border-top: 1px solid #1d2125">
+<div style="max-width: 1360px; margin: 0 auto; padding: clamp(80px, 9vw, 120px) 28px">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 20px 40px">
+<div><div class="m" style="font-weight: 700; font-size: 16px; color: #b9ff00">CON QUIÉN TRABAJO</div>
+<h2 class="s" style="margin: 14px 0 0; font-weight: 900; font-size: clamp(44px, 5.4vw, 84px); line-height: 0.88; letter-spacing: -0.01em; text-transform: uppercase">Clubes y<br>federaciones</h2></div>
+<p style="margin: 0; max-width: 420px; font-size: 17px; line-height: 1.5; color: #c3c9ce">El mismo método que aplico cada semana con estos equipos y deportistas de competición.</p>
 </div>
+<div class="escgrid" style="margin-top: 44px; display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 100px), 1fr)); gap: 10px">
+<div style="background: #e9ebe8; color: #0e1012; border-radius: 20px; padding: 18px 10px 14px; display: flex; flex-direction: column; align-items: center; justify-content: space-between; gap: 12px; min-height: 180px; text-align: center"><img src="assets/escudos/EMR.png" alt="Escudo de Instituto Municipal de Deportes de Santander" loading="lazy" style="width: min(110px, 86%); aspect-ratio: 1; height: auto; object-fit: contain"><span style="font-size: 12px; font-weight: 500; line-height: 1.3; hyphens: auto">Instituto Municipal de Deportes de Santander</span></div>
+<div style="background: #e9ebe8; color: #0e1012; border-radius: 20px; padding: 18px 10px 14px; display: flex; flex-direction: column; align-items: center; justify-content: space-between; gap: 12px; min-height: 180px; text-align: center"><img src="assets/escudos/FCR.png" alt="Escudo de Federación Cántabra de Rugby" loading="lazy" style="width: min(110px, 86%); aspect-ratio: 1; height: auto; object-fit: contain"><span style="font-size: 12px; font-weight: 500; line-height: 1.3; hyphens: auto">Federación Cántabra de Rugby</span></div>
+<div style="background: #e9ebe8; color: #0e1012; border-radius: 20px; padding: 18px 10px 14px; display: flex; flex-direction: column; align-items: center; justify-content: space-between; gap: 12px; min-height: 180px; text-align: center"><img src="assets/escudos/FCK.png" alt="Escudo de Federación Cántabra de Kárate" loading="lazy" style="width: min(110px, 86%); aspect-ratio: 1; height: auto; object-fit: contain"><span style="font-size: 12px; font-weight: 500; line-height: 1.3; hyphens: auto">Federación Cántabra de Kárate</span></div>
+<div style="background: #e9ebe8; color: #0e1012; border-radius: 20px; padding: 18px 10px 14px; display: flex; flex-direction: column; align-items: center; justify-content: space-between; gap: 12px; min-height: 180px; text-align: center"><img src="assets/escudos/AVA.png" alt="Escudo de A.D. Voleibol Astillero" loading="lazy" style="width: min(110px, 86%); aspect-ratio: 1; height: auto; object-fit: contain"><span style="font-size: 12px; font-weight: 500; line-height: 1.3; hyphens: auto">A.D. Voleibol Astillero</span></div>
+<div style="background: #e9ebe8; color: #0e1012; border-radius: 20px; padding: 18px 10px 14px; display: flex; flex-direction: column; align-items: center; justify-content: space-between; gap: 12px; min-height: 180px; text-align: center"><img src="assets/escudos/CBN.png" alt="Escudo de C.B. Némesis Santander" loading="lazy" style="width: min(110px, 86%); aspect-ratio: 1; height: auto; object-fit: contain"><span style="font-size: 12px; font-weight: 500; line-height: 1.3; hyphens: auto">C.B. Némesis Santander</span></div>
+<div style="background: #e9ebe8; color: #0e1012; border-radius: 20px; padding: 18px 10px 14px; display: flex; flex-direction: column; align-items: center; justify-content: space-between; gap: 12px; min-height: 180px; text-align: center"><img src="assets/escudos/CRC.png" alt="Escudo de Camargo Rugby Club" loading="lazy" style="width: min(110px, 86%); aspect-ratio: 1; height: auto; object-fit: contain"><span style="font-size: 12px; font-weight: 500; line-height: 1.3; hyphens: auto">Camargo Rugby Club</span></div>
+<div style="background: #e9ebe8; color: #0e1012; border-radius: 20px; padding: 18px 10px 14px; display: flex; flex-direction: column; align-items: center; justify-content: space-between; gap: 12px; min-height: 180px; text-align: center"><img src="assets/escudos/URB.png" alt="Escudo de Unión Rugby Besaya" loading="lazy" style="width: min(110px, 86%); aspect-ratio: 1; height: auto; object-fit: contain"><span style="font-size: 12px; font-weight: 500; line-height: 1.3; hyphens: auto">Unión Rugby Besaya</span></div>
+<div style="background: #e9ebe8; color: #0e1012; border-radius: 20px; padding: 18px 10px 14px; display: flex; flex-direction: column; align-items: center; justify-content: space-between; gap: 12px; min-height: 180px; text-align: center"><img src="assets/escudos/SPB.png" alt="Escudo de S.P. Basket" loading="lazy" style="width: min(110px, 86%); aspect-ratio: 1; height: auto; object-fit: contain"><span style="font-size: 12px; font-weight: 500; line-height: 1.3; hyphens: auto">S.P. Basket</span></div>
+<div style="background: #e9ebe8; color: #0e1012; border-radius: 20px; padding: 18px 10px 14px; display: flex; flex-direction: column; align-items: center; justify-content: space-between; gap: 12px; min-height: 180px; text-align: center"><span class="s" style="width: min(110px, 86%); aspect-ratio: 1; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 30px; line-height: 0.9; text-transform: uppercase">Fed.<br>Cánt.</span><span style="font-size: 12px; font-weight: 500; line-height: 1.3; hyphens: auto">Fed. Cántabra de Deportes para Personas con Discapacidad Intelectual</span></div>
 </div>
-</article>
-<article style="position: relative; min-height: 640px; overflow: hidden; border-right: 1px solid #1d2125; background: #000000">
-<img src="assets/img/eval_6.jpg" alt="Valoración física de una jugadora" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 60%; opacity: 0.55">
-<div class="ht" aria-hidden="true"></div>
-<div style="position: relative; height: 100%; min-height: 640px; box-sizing: border-box; padding: 32px 28px; display: flex; flex-direction: column; justify-content: space-between">
-<div style="display: flex; justify-content: space-between"><span class="m" style="font-weight: 900; font-size: 96px; line-height: 0.8">02</span><span class="m" style="font-weight: 700; font-size: 15px; color: #b9ff00">LESIONARTE MENOS</span></div>
-<div>
-<div class="s" style="font-weight: 900; font-size: clamp(44px, 4.4vw, 68px); line-height: 0.88; text-transform: uppercase">Prevención</div>
-<p style="margin: 14px 0 0; max-width: 340px; font-size: 17px; line-height: 1.5; color: #d3d8dc">Un cuerpo preparado aguanta más temporadas.</p>
-</div>
-</div>
-</article>
-<article style="position: relative; min-height: 640px; overflow: hidden; border-right: 1px solid #1d2125; background: #000000">
-<img src="assets/img/rugby-staff.jpg" alt="Freddy con técnicos de rugby en un centro deportivo" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 40%; opacity: 0.55">
-<div class="ht" aria-hidden="true"></div>
-<div style="position: relative; height: 100%; min-height: 640px; box-sizing: border-box; padding: 32px 28px; display: flex; flex-direction: column; justify-content: space-between">
-<div style="display: flex; justify-content: space-between"><span class="m" style="font-weight: 900; font-size: 96px; line-height: 0.8">03</span><span class="m" style="font-weight: 700; font-size: 15px; color: #b9ff00">SENTIRTE MEJOR</span></div>
-<div>
-<div class="s" style="font-weight: 900; font-size: clamp(44px, 4.4vw, 68px); line-height: 0.88; text-transform: uppercase">Salud</div>
-<p style="margin: 14px 0 0; max-width: 340px; font-size: 17px; line-height: 1.5; color: #d3d8dc">Entrenar bien se nota fuera del gimnasio.</p>
-</div>
-</div>
-</article>
 </div>
 </section>
 
